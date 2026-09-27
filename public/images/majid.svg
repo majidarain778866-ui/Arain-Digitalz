@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <clipPath id="monitor-clip">
+      <rect x="16" y="136" width="380" height="296" rx="28" ry="28" />
+    </clipPath>
+    <clipPath id="window-clip">
+      <rect x="236" y="228" width="260" height="264" rx="24" ry="24" />
+    </clipPath>
+  </defs>
+
+  <!-- 1. GEAR (BACKGROUND TOP-RIGHT) -->
+  <g id="gear" transform="translate(382, 160)">
+    <!-- 8 Gear Teeth -->
+    <rect x="-24" y="-118" width="48" height="36" rx="10" fill="#ff481b" />
+    <rect x="-24" y="82" width="48" height="36" rx="10" fill="#ff481b" />
+    <rect x="-118" y="-24" width="36" height="48" rx="10" fill="#ff481b" />
+    <rect x="82" y="-24" width="36" height="48" rx="10" fill="#ff481b" />
+
+    <g transform="rotate(45)">
+      <rect x="-24" y="-118" width="48" height="36" rx="10" fill="#ff481b" />
+      <rect x="-24" y="82" width="48" height="36" rx="10" fill="#ff481b" />
+      <rect x="-118" y="-24" width="36" height="48" rx="10" fill="#ff481b" />
+      <rect x="82" y="-24" width="36" height="48" rx="10" fill="#ff481b" />
+    </g>
+
+    <!-- Gear Outer Ring -->
+    <circle cx="0" cy="0" r="96" fill="#ff481b" />
+    <!-- Gear Center Hole (cutout transparent) -->
+    <circle cx="0" cy="0" r="44" fill="#ffffff" />
+  </g>
+
+  <!-- 2. COMPUTER MONITOR (LEFT) -->
+  <!-- Monitor Base -->
+  <rect x="104" y="464" width="172" height="28" rx="14" fill="#e2e8f0" />
+  <!-- Monitor Neck -->
+  <path d="M154 420 L154 466 L226 466 L226 420 Z" fill="#cbd5e1" />
+
+  <!-- Monitor Screen & Bezel with Clip -->
+  <g clip-path="url(#monitor-clip)">
+    <!-- Screen Blue Background -->
+    <rect x="16" y="136" width="380" height="296" fill="#0084ff" />
+    <!-- Diagonal Subtle Shadow on Right Side -->
+    <path d="M220 136 L396 280 L396 136 Z" fill="#0074e0" opacity="0.6" />
+    <path d="M104 366 L396 366 L396 136 L220 136 Z" fill="#0074e0" opacity="0.2" />
+
+    <!-- Code Brackets </ > -->
+    <!-- Left Bracket < -->
+    <path d="M124 220 L76 256 L124 292" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Slash / -->
+    <path d="M176 204 L142 308" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Right Bracket > -->
+    <path d="M194 220 L242 256 L194 292" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Monitor Lower Bezel Panel -->
+    <rect x="16" y="366" width="380" height="66" fill="#cbd5e1" />
+    <!-- Power Button Dot -->
+    <circle cx="206" cy="398" r="8" fill="#0084ff" />
+  </g>
+
+  <!-- 3. BROWSER / CODE WINDOW (FOREGROUND BOTTOM-RIGHT) -->
+  <g clip-path="url(#window-clip)">
+    <!-- Window Main Body -->
+    <rect x="236" y="228" width="260" height="264" fill="#373d49" />
+
+    <!-- Yellow Top Title Bar -->
+    <rect x="236" y="228" width="260" height="52" fill="#fbbf24" />
+    <!-- Window Control Dots (White) -->
+    <circle cx="270" cy="254" r="8" fill="#ffffff" />
+    <circle cx="298" cy="254" r="8" fill="#ffffff" />
+    <circle cx="326" cy="254" r="8" fill="#ffffff" />
+
+    <!-- Wireframe Placeholder Box (Orange) -->
+    <rect x="266" y="310" width="198" height="88" rx="10" fill="#ff481b" />
+    <!-- Crossed Diagonal Lines Inside Box -->
+    <path d="M266 310 L464 398" stroke="#c23812" stroke-width="12" stroke-linecap="round" />
+    <path d="M464 310 L266 398" stroke="#c23812" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Content Placeholder Lines (White Pills) -->
+    <!-- Line 1: Left & Right -->
+    <rect x="260" y="424" width="90" height="16" rx="8" fill="#e2e8f0" />
+    <rect x="382" y="424" width="90" height="16" rx="8" fill="#e2e8f0" />
+    <!-- Line 2: Left & Right -->
+    <rect x="260" y="456" width="56" height="16" rx="8" fill="#e2e8f0" />
+    <rect x="382" y="456" width="56" height="16" rx="8" fill="#e2e8f0" />
+  </g>
+</svg>

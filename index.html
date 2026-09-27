@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var fetchValue = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return fetchValue;
+            },
+            set: function(val) {
+              fetchValue = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn('Could not redefine window.fetch:', e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arain Digitalz</title>
+    <meta name="description" content="A beautiful and modern agency landing page hero section with refined typography and elegant animations." />
+    <meta name="theme-color" content="#0c0c0c" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arain Digitalz" />
+    <meta property="og:description" content="A beautiful and modern agency landing page hero section with refined typography and elegant animations." />
+    <meta property="og:image" content="/images/majid-profile.png" />
+
+    <!-- Twitter / X Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arain Digitalz" />
+    <meta name="twitter:description" content="A beautiful and modern agency landing page hero section with refined typography and elegant animations." />
+    <meta name="twitter:image" content="/images/majid-profile.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
